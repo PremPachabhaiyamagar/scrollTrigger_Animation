@@ -12,11 +12,10 @@ ScrollTrigger.create({
   end: "bottom bottom",
   pin: true,
   pinSpacing: false,
-  scrub: true,
+  // scrub: true,
 });
 
 const text = document.querySelector(".text");
-console.log(text);
 gsap.to(".box", {
   scrollTrigger: {
     onEnter: () => {
@@ -35,9 +34,8 @@ gsap.to(".box", {
     start: "top 60%",
     end: "bottom 40%",
     markers: true,
-    triggerActions: "play pause resume reverse",
-    scrub: true,
+    toggleActions: "play pause resume reverse",
   },
   duration: 3,
-  rotation: 180,
+  rotate: 720,
 });
